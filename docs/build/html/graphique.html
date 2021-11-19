@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Graphique module &#8212; 1-Technology assessment and cyber-defence procurement 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Processing" href="processing.html" />
+    <link rel="prev" title="Analysis module" href="analysis.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="graphique-module">
+<h1>Graphique module<a class="headerlink" href="#graphique-module" title="Permalink to this headline">¶</a></h1>
+<section id="module-src.graphics.graph_exp_mean_share_cyber">
+<span id="expanding-mean-of-the-security-share-graphic-classes"></span><h2>Expanding mean of the security share graphic classes<a class="headerlink" href="#module-src.graphics.graph_exp_mean_share_cyber" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_exp_mean_share_cyber.GraphExpMeanShareCyber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_exp_mean_share_cyber.</span></span><span class="sig-name descname"><span class="pre">GraphExpMeanShareCyber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_exp_mean_share_cyber.GraphExpMeanShareCyber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the expanding mean of the security share of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">analysis.Analyse</span></code> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_exp_mean_share_cyber.GraphExpMeanShareCyberSmall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_exp_mean_share_cyber.</span></span><span class="sig-name descname"><span class="pre">GraphExpMeanShareCyberSmall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crtc_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_exp_mean_share_cyber.GraphExpMeanShareCyberSmall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the small version of the expanding mean of the security share of
+a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p></li>
+<li><p><strong>crtc_code</strong> (<em>str</em>) – CRTC code.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graphic_base">
+<span id="graphicbase-class"></span><h2>GraphicBase class<a class="headerlink" href="#module-src.graphics.graphic_base" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graphic_base.GraphicBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graphic_base.</span></span><span class="sig-name descname"><span class="pre">GraphicBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suptitle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(30,</span> <span class="pre">15)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graphic_base.GraphicBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Standard template graphic. It uses LaTeX.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>suptitle</strong> (<em>str</em>) – Suptitle name of the graphic.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title name of the graphic.</p></li>
+<li><p><strong>xlabel</strong> (<em>str</em>) – X-axis name.</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – Y-axis name.</p></li>
+<li><p><strong>date_format</strong> (<em>bool</em>) – use or not the date formatter on the X-axis.</p></li>
+<li><p><strong>figsize</strong> (<em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – size of the figure.</p></li>
+<li><p><strong>fontsize</strong> (<em>int</em>) – font size.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.graphics.graphic_base.GraphicBase.add_text_legend">
+<span class="sig-name descname"><span class="pre">add_text_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.graphics.graphic_base.GraphicBase.add_text_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds <cite>text</cite> into the legend box, the <cite>text</cite> can be associated to a
+<cite>plot</cite>. The method <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase.show_legend" title="src.graphics.graphic_base.GraphicBase.show_legend"><code class="xref py py-meth docutils literal notranslate"><span class="pre">show_legend()</span></code></a> must be call at the end of all
+<a class="reference internal" href="#src.graphics.graphic_base.GraphicBase.add_text_legend" title="src.graphics.graphic_base.GraphicBase.add_text_legend"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_text_legend()</span></code></a> calling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – Text to add into the legend box.</p></li>
+<li><p><strong>plot</strong> – Return a <cite>plt.plot()</cite>, to associate <cite>text</cite> to this plot.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.graphics.graphic_base.GraphicBase.save_graph">
+<span class="sig-name descname"><span class="pre">save_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.graphics.graphic_base.GraphicBase.save_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the graphic into <cite>result_folder</cite>, create the path if it
+doesn’t exist. Close the figure too.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result_folder</strong> (str or <code class="xref py py-class docutils literal notranslate"><span class="pre">pathlib.PurePath</span></code>) – Path to the directory where the file will be
+saved.</p></li>
+<li><p><strong>file_name</strong> (<em>str</em>) – Name of the saved file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.graphics.graphic_base.GraphicBase.show_graph">
+<span class="sig-name descname"><span class="pre">show_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.graphics.graphic_base.GraphicBase.show_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows the graphic and close the figure too.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.graphics.graphic_base.GraphicBase.show_legend">
+<span class="sig-name descname"><span class="pre">show_legend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.graphics.graphic_base.GraphicBase.show_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the legend box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> (<em>int</em>) – size of the legend font.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graph_norm_eprints">
+<span id="normalized-e-prints-graphics-classes"></span><h2>Normalized e-prints graphics classes<a class="headerlink" href="#module-src.graphics.graph_norm_eprints" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_norm_eprints.GraphNormEPrints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_norm_eprints.</span></span><span class="sig-name descname"><span class="pre">GraphNormEPrints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_norm_eprints.GraphNormEPrints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the normalized amount of e-prints of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graph_norm_eprints_fit">
+<span id="normalized-e-prints-fits-classes"></span><h2>Normalized e-prints fits classes<a class="headerlink" href="#module-src.graphics.graph_norm_eprints_fit" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_norm_eprints_fit.GraphAllNormFit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_norm_eprints_fit.</span></span><span class="sig-name descname"><span class="pre">GraphAllNormFit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_norm_eprints_fit.GraphAllNormFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws all normalized amount of e-prints fits of each CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_norm_eprints_fit.GraphNormEPrintsFit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_norm_eprints_fit.</span></span><span class="sig-name descname"><span class="pre">GraphNormEPrintsFit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_norm_eprints_fit.GraphNormEPrintsFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_norm_eprints_fit.GraphNormEPrintsFitSmall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_norm_eprints_fit.</span></span><span class="sig-name descname"><span class="pre">GraphNormEPrintsFitSmall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crtc_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_norm_eprints_fit.GraphNormEPrintsFitSmall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graph_norm_eprints_vs_cyber">
+<span id="normalized-e-prints-versus-normalized-security-e-prints-graphics-classes"></span><h2>Normalized e-prints versus normalized security e-prints graphics classes<a class="headerlink" href="#module-src.graphics.graph_norm_eprints_vs_cyber" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_norm_eprints_vs_cyber.GraphNormEPrintsVsCyber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_norm_eprints_vs_cyber.</span></span><span class="sig-name descname"><span class="pre">GraphNormEPrintsVsCyber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_norm_eprints_vs_cyber.GraphNormEPrintsVsCyber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the normalized amount of e-prints and cyber ones of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graph_opinion_distrib">
+<span id="opinion-distribution-graphic-class"></span><h2>Opinion distribution graphic class<a class="headerlink" href="#module-src.graphics.graph_opinion_distrib" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_opinion_distrib.GraphOpinionDistrib">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_opinion_distrib.</span></span><span class="sig-name descname"><span class="pre">GraphOpinionDistrib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_opinion_distrib.GraphOpinionDistrib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the opinion distribution of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p></li>
+<li><p><strong>quantiles</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>) – contain the first, second and third quantiles.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_opinion_distrib.GraphOpinionDistribSmall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_opinion_distrib.</span></span><span class="sig-name descname"><span class="pre">GraphOpinionDistribSmall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crtc_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_opinion_distrib.GraphOpinionDistribSmall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the small version of the opinion distribution of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p></li>
+<li><p><strong>quantiles</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>) – contain the first, second and third quantiles.</p></li>
+<li><p><strong>crtc_code</strong> (<em>str</em>) – CRTC code.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-src.graphics.graph_share_of_cyber">
+<span id="security-considerations-share-graphics-classes"></span><h2>Security considerations share graphics classes<a class="headerlink" href="#module-src.graphics.graph_share_of_cyber" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_share_of_cyber.GraphShareOfCyber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_share_of_cyber.</span></span><span class="sig-name descname"><span class="pre">GraphShareOfCyber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_share_of_cyber.GraphShareOfCyber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the security share of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="src.graphics.graph_share_of_cyber.GraphShareOfCyberSmall">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.graphics.graph_share_of_cyber.</span></span><span class="sig-name descname"><span class="pre">GraphShareOfCyberSmall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analyse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crtc_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.graphics.graph_share_of_cyber.GraphShareOfCyberSmall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.graphics.graphic_base.GraphicBase" title="src.graphics.graphic_base.GraphicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.graphics.graphic_base.GraphicBase</span></code></a></p>
+<p>Draws the small version of the security share of a CRTC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analyse</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code>) – <code class="xref py py-class docutils literal notranslate"><span class="pre">src.analysis.Analyse</span></code> instance.</p></li>
+<li><p><strong>crtc_code</strong> (<em>str</em>) – CRTC code.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">1-Technology assessment and cyber-defence procurement</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graphique module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_exp_mean_share_cyber">Expanding mean of the security share graphic classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graphic_base">GraphicBase class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_norm_eprints">Normalized e-prints graphics classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_norm_eprints_fit">Normalized e-prints fits classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_norm_eprints_vs_cyber">Normalized e-prints versus normalized security e-prints graphics classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_opinion_distrib">Opinion distribution graphic class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.graphics.graph_share_of_cyber">Security considerations share graphics classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp_tools.html">NLP tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function.html">Function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query_making.html">Query making</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="analysis.html" title="previous chapter">Analysis module</a></li>
+      <li>Next: <a href="processing.html" title="next chapter">Processing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, William Lacube.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/graphique.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

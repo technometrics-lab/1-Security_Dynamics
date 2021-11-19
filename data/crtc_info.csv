@@ -1,0 +1,21 @@
+CRTC;full_name;S_date;E_date
+cs.AI;Artificial Intelligence;1993;2021
+cs.LG;Machine Learning;1993;2021
+cs.AR;Hardware Architecture;1998;2021
+cs.CC;Computational Complexity;1999;2021
+cs.CL;Computation and Language;2005;2021
+cs.CR;Cryptography and Security;1999;2021
+cs.CV;Computer Vision and Pattern Recognition;1998;2021
+cs.DB;Databases;1998;2021
+cs.DC;Distributed, Parallel, and Cluster Computing;1998;2021
+cs.DS;Data Structures and Algorithms;1996;2021
+cs.GT;Computer Science and Game Theory;2000;2021
+cs.HC;Human-Computer Interaction;1998;2021
+cs.IR;Information Retrieval;1998;2021
+cs.NE;Neural and Evolutionary Computing;1998;2021
+cs.NI;Networking and Internet Architecture;1999;2021
+cs.OS;Operating Systems;1998;2021
+cs.PL;Programming Languages;1999;2021
+cs.RO;Robotics;1998;2021
+cs.SE;Software Engineering;1998;2021
+cs.SY;Systems and Control;2008;2021

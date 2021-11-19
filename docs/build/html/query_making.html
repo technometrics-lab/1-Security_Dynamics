@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Query making &#8212; 1-Technology assessment and cyber-defence procurement 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Function" href="function.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-src.query_making.query_arxiv_cat">
+<span id="query-making"></span><h1>Query making<a class="headerlink" href="#module-src.query_making.query_arxiv_cat" title="Permalink to this headline">¶</a></h1>
+<p>QueryArXivCat class definition, used to retrieve arXiv following the arXiv
+API : <a class="reference external" href="https://arxiv.org/help/api/user-manual">https://arxiv.org/help/api/user-manual</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.query_making.query_arxiv_cat.</span></span><span class="sig-name descname"><span class="pre">QueryArXivCat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyber_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class retrieve all URLs of e-prints of categories contained in
+<cite>categories</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result_folder</strong> – Path to the result folder where .csv data will be
+stored.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – arXiv category.</p></li>
+<li><p><strong>cyber_keywords</strong> (<em>str</em>) – Pre-formated queries of security considerations keywords.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.ARXIV_LIMIT">
+<span class="sig-name descname"><span class="pre">ARXIV_LIMIT</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.ARXIV_LIMIT" title="Permalink to this definition">¶</a></dt>
+<dd><p>arXiv API doesn’t allow to retrieve more than 50 000 e-prints</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.MAX_LOOP">
+<span class="sig-name descname"><span class="pre">MAX_LOOP</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.MAX_LOOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number max of loop, if a query doesn’t work</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.MAX_QUERY_RESULT">
+<span class="sig-name descname"><span class="pre">MAX_QUERY_RESULT</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.MAX_QUERY_RESULT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of wanted result per query</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.__PARAMS">
+<span class="sig-name descname"><span class="pre">__PARAMS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'max_results':</span> <span class="pre">1,</span> <span class="pre">'search_query':</span> <span class="pre">'',</span> <span class="pre">'sortBy':</span> <span class="pre">'submittedDate',</span> <span class="pre">'sortOrder':</span> <span class="pre">'ascending',</span> <span class="pre">'start':</span> <span class="pre">1}</span></em><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.__PARAMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.__URL">
+<span class="sig-name descname"><span class="pre">__URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'http://export.arxiv.org/api/query'</span></em><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.__URL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.__do_request_req">
+<span class="sig-name descname"><span class="pre">__do_request_req</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.__do_request_req" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursive function for retry request if a bug occur.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameters</strong> (<em>dict</em>) – restAPI parameters.</p></li>
+<li><p><strong>i</strong> (<em>int</em>) – recursive counter.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.__get_max_results">
+<span class="sig-name descname"><span class="pre">__get_max_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.__get_max_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do a request to obtain the size of a category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>search_query</strong> (<em>str</em>) – formated query.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.category" title="Permalink to this definition">¶</a></dt>
+<dd><p><cite>pandas.Series</cite> which contain categories</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.cyber_keywords">
+<span class="sig-name descname"><span class="pre">cyber_keywords</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.cyber_keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formated query of security considerations keywords</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.get_arxiv_path">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_arxiv_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paper_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.get_arxiv_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the arXiv path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paper_id</strong> (<em>str</em>) – id of the e-print.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – category of the paper (if category == ‘abs’ then it uses only the <cite>paper_id</cite>).</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – version of the e-print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.get_eprints">
+<span class="sig-name descname"><span class="pre">get_eprints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.get_eprints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all eprints of a category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parameters</strong> (<em>dict</em>) – restAPI parameters.</p></li>
+<li><p><strong>max_results</strong> (<em>int</em>) – number of eprints to retrieve.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – name of the desired category to retrieve.</p></li>
+<li><p><strong>total_data</strong> ([<code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code>]) – list of eprints already retrieved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.processing">
+<span class="sig-name descname"><span class="pre">processing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute queries on arXiv</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.query_making.query_arxiv_cat.QueryArXivCat.result_folder">
+<span class="sig-name descname"><span class="pre">result_folder</span></span><a class="headerlink" href="#src.query_making.query_arxiv_cat.QueryArXivCat.result_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the result folder</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">1-Technology assessment and cyber-defence procurement</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graphique.html">Graphique module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp_tools.html">NLP tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function.html">Function</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Query making</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="function.html" title="previous chapter">Function</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, William Lacube.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/query_making.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
