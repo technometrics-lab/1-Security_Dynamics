@@ -8,6 +8,7 @@ __all__ = ['GraphicBase',
            'GraphOpinionDistrib',
            'GraphOpinionDistribSmall',
            'GraphNormEPrintsFit',
+           'GraphNormEPrintsFitForecast',
            'GraphNormEPrintsFitSmall',
            'GraphExpMeanShareCyber',
            'GraphAllNormFit']
@@ -20,6 +21,7 @@ from .graph_opinion_distrib import GraphOpinionDistrib, GraphOpinionDistribSmall
 from .graph_norm_eprints_fit import GraphNormEPrintsFit, \
                                     GraphNormEPrintsFitSmall, \
                                     GraphAllNormFit
+from .graph_norm_eprints_fit_forecast import GraphNormEPrintsFitForecast
 
 from .graph_exp_mean_share_cyber import GraphExpMeanShareCyber, \
                                         GraphExpMeanShareCyberSmall

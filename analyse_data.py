@@ -105,6 +105,10 @@ if __name__ == '__main__' :
         # Calcul sigmoid fit for the normalized number of uploads
         info_fit = minimization(analyse)
 
+        graph.GraphNormEPrintsFitForecast(analyse, info_fit, 48).save_graph(
+            args.output_path.joinpath('fit_norm_e-prints_forecast'),
+            CLUSTER_CODE)
+
         graph.GraphNormEPrintsFit(analyse, info_fit).save_graph(
             args.output_path.joinpath('fit_norm_e-prints'),
             CLUSTER_CODE)
