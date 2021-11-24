@@ -9,10 +9,11 @@ def minimization(analyse):
 
     :param analyse: instance of the :class:`.analyse.Analyse` realated to a crtc.
     :type analyse: :class:`.analyse.Analyse`"""
-    df = analyse.get_eprints_count_norm().dropna() * 100.
+    df = analyse.get_eprints_count_norm() * 100.
     # We count eprints so the measurement error is its square root
-    norm_incert = df.apply(np.sqrt)
+    norm_incert = analyse.get_eprints_count().apply(np.sqrt)
     norm_incert['id'] = norm_incert['id'].apply(lambda x: 1. if x<1. else x)
+    norm_incert['id'] = norm_incert['id'] / analyse.arxiv_stats['submissions'] * 100.
 
     # Convertion of dates into int
     empiric_x = ((df.index - df.index.min()) / np.timedelta64(1,'M')).values
@@ -27,7 +28,7 @@ def minimization(analyse):
     # Settings of the minimization
     minner = Minimizer(simple_logistic_weight,
                        params,
-                       fcn_args=(empiric_x, empiric_y, norm_incert.values),
+                       fcn_args=(empiric_x, empiric_y, norm_incert['id'].values),
                        calc_covar=False)
     # Minimization
     result = minner.minimize(method='leastsq')
