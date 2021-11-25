@@ -2,11 +2,7 @@
 Installation
 ============
 
-You don't need to install anything if you use the **venv** (on Linux)::
-
-  source venv/bin/activate
-
-If you prefer to install all dependencies in your own environment (all the following commands are for Linux-Debian/Ubuntu)::
+To install all dependencies in your own environment (all the following commands are for Linux-Debian/Ubuntu)::
 
   pip install -r requirements.txt
 

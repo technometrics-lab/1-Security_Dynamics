@@ -1,4 +1,8 @@
-"""Main file for processing e-prints and getting opinion of them."""
+"""Main file for processing e-prints and getting opinion of them.
+To retrieve and update the local copy of arXiv files, use:
+
+    gsutil -m rsync -r gs://arxiv-dataset/arxiv/ dest/
+"""
 import argparse
 import os
 from pathlib import PurePath, Path
