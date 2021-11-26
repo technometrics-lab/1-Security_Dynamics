@@ -18,17 +18,17 @@ if __name__ == '__main__' :
                         dest='arxiv_path',
                         action='store',
                         help='path to the arxiv folder',
-                        default='/mnt/arxiv')
+                        default=PurePath('/mnt/arxiv'))
     parser.add_argument('--eprints',
                         dest='eprints_path',
                         action='store',
                         help='path to the e-prints folder',
-                        default='data/query_e-prints_2021_11_11')
+                        default=PurePath('data').joinpath('query_e-prints_2021_11_11'))
     parser.add_argument('--output',
                         dest='output',
                         action='store',
                         help='path to the output folder',
-                        default='result')
+                        default=PurePath('result'))
     args = parser.parse_args()
 
     # Cleaning path for Windows compatibility

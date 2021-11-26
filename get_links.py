@@ -14,12 +14,12 @@ if __name__ == '__main__' :
                         dest='output',
                         action='store',
                         help='path to the output folder',
-                        default='data/')
+                        default=PurePath('data'))
     parser.add_argument('--categories',
                         dest='categories_path',
                         action='store',
                         help='path to the file containing the list of categories',
-                        default='data/crtc_info.csv')
+                        default=PurePath('data').joinpath('crtc_info.csv'))
     args = parser.parse_args()
 
     # Creation of folders

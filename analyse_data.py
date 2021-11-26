@@ -16,16 +16,16 @@ if __name__ == '__main__' :
     parser.add_argument('--dataset_path',
                         action='store',
                         help='path to the e-prints folder',
-                        default='data/dataset')
+                        default=PurePath('data').joinpath('dataset'))
     parser.add_argument('--crtc_info_path',
                         action='store',
                         help='path to the file containing all information ' \
                              'related to category analyses',
-                        default='data/crtc_info.csv')
+                        default=PurePath('data').joinpath('crtc_info.csv'))
     parser.add_argument('--output_path',
                         action='store',
                         help='path to the output folder',
-                        default='result_analysis')
+                        default=PurePath('result_analysis'))
     args = parser.parse_args()
 
     # Cleaning path for Windows compatibility

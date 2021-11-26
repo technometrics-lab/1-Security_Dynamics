@@ -10,19 +10,19 @@ if __name__ == '__main__' :
     parser.add_argument('--eprints',
                         dest='e_prints_path',
                         action='store',
-                        default='data/query_e-prints_2021_11_11/')
+                        default=PurePath('data').joinpath('query_e-prints_2021_11_11'))
     parser.add_argument('--ceprints',
                         dest='cyber_eprints_path',
                         action='store',
-                        default='data/cyber_e_prints_2021_11_11/')
+                        default=PurePath('data').joinpath('cyber_e_prints_2021_11_11'))
     parser.add_argument('--opinion',
                         dest='opinion_path',
                         action='store',
-                        default='data/opinion_2021_11_11/')
+                        default=PurePath('data').joinpath('opinion_2021_11_11'))
     parser.add_argument('--output',
                         dest='output_path',
                         action='store',
-                        default='data/dataset/')
+                        default=PurePath('data').joinpath('dataset'))
     args = parser.parse_args()
 
     # Cleaning path for Windows compatibility
