@@ -1,3 +1,0 @@
-[submodule "src/NLP_tools"]
-	path = src/NLP_tools
-	url = git@github.com:technometrics-lab/NLP_tools.git
