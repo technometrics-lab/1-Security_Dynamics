@@ -58,7 +58,7 @@ class GraphicBase:
 
             self.ax.xaxis.set_major_locator(years)
             self.ax.xaxis.set_major_formatter(years_fmt)
-        self.ax.xaxis.set_tick_params(rotation=45,
+        self.ax.xaxis.set_tick_params(rotation=90,
                                       labelsize=fontsize)
         self.ax.yaxis.set_tick_params(labelsize=fontsize)
 

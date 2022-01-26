@@ -43,7 +43,7 @@ class GraphExpMeanShareCyberSmall(GraphicBase):
                                fontsize=10)
 
         exp_mean_cyber_eprints = (analyse.get_cyber_eprints_count() /
-                                  analyse.get_eprints_count()).expanding(1).mean()
+                                  analyse.get_eprints_count()).rolling(12).mean()
 
         self.ax.plot(exp_mean_cyber_eprints.index,
                      exp_mean_cyber_eprints.values,

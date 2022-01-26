@@ -72,23 +72,23 @@ class GraphOpinionDistribSmall(GraphicBase):
                                '',
                                'Opinion',
                                figsize=(6.4, 4.8),
-                               fontsize=10)
+                               fontsize=14)
 
         self.ax.plot(quantiles.index,
                      quantiles['quantile_1'],
                      color = '#2C75FF',
-                     linewidth=0.5,
+                     linewidth=0.2,
                      markersize=2)
         self.ax.plot(quantiles.index,
                      quantiles['quantile_2'],
                      'o',
                      color = '#0F056B',
-                     linewidth=0.5,
+                     linewidth=0.2,
                      markersize=2)
         self.ax.plot(quantiles.index,
                      quantiles['quantile_3'],
                      color = '#2C75FF',
-                     linewidth=0.5,
+                     linewidth=0.2,
                      markersize=2)
 
         self.ax.fill_between(quantiles.index,
